@@ -1,0 +1,9 @@
+._hero-section{
+    background:linear-gradient(0deg, rgba(44, 44, 44, 0.52), rgba(49, 49, 49, 0.475)), url(https://i.ibb.co/n73JS4j/h1-banner-1.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+}
+._hero-section h2{
+    font-family: 'Poppins', sans-serif;
+}
