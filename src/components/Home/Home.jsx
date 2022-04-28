@@ -4,7 +4,9 @@ import "./Home.css";
 const Home = () => {
   return (
     <div>
-     
+     <div className="_hero-section ">
+
+     </div>
     </div>
   );
 };
