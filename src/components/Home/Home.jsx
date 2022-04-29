@@ -4,13 +4,12 @@ import useProducts from "../../Hooks/useProducts";
 import ProductCard from "../ProductCard/ProductCard";
 import "./Home.css";
 
-const Home = () => {
-  const inventoryRef = useRef(null)
+const Home = ({handleInventoryScroll, inventoryRef}) => {
+  
   const [products] = useProducts();
   console.log(products);
-  const handleInventoryScroll = () => {
-    inventoryRef.current.scrollIntoView()  
-  }
+
+  
 
   return (
     <div>
