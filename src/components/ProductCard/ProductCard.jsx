@@ -14,9 +14,9 @@ const ProductCard = ({ product }) => {
         <h2 className="card-title">{product.name}</h2>
         <p>{product.description.slice(0,50)}...</p>
         <div className="card-actions justify-center gap-2">
-          <div className="badge badge-outline p-3"> Quantity:<span className="font-medium"> { product.quantity}</span> </div>
-          <div className="badge badge-outline p-3">Supplier:<span className="font-medium"> { product.supplier}</span> </div>
-          <div className="badge p-3">Price: <span className="font-medium"> { product.price}$</span></div>
+          <div className="badge badge-outline p-3"> <p>Quantity:<span className="font-medium"> { product.quantity}</span></p> </div>
+          <div className="badge badge-outline p-3">  <p>Supplier:<span className="font-medium"> { product.supplier}</span></p> </div>
+          <div className="badge p-4 text-md"> <p>Price: <span className="font-medium "> { product.price}$</span></p> </div>
         </div>
         <div class="card-actions justify-center mt-4 ">
           <button class="bg-gray-500 text-white rounded-lg px-7 py-2 hover:bg-gray-700 transition-all"> <Link to={`/${product._id}`}>Manage</Link> </button>
