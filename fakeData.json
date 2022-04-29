@@ -1,0 +1,51 @@
+[
+    {
+        "image": "https://i.ibb.co/dgj6R5X/1.webp",
+        "name": "Morr Wooden Chair",
+        "description": "The Woodley Dining Chair is a truly comfortable chair, it has a high flexible back with good 'give' and a deep seat pocket supported by an elegant Wood/Wire Base.",
+        "price": 80,
+        "supplier": "Morr",
+        "quantity": 50
+      },
+    {
+        "image": "https://i.ibb.co/6gnPbMk/2.webp",
+        "name": "Banisary Round Seat",
+        "description": "It’s the dawn of a new day for gray. Embrace the style trend with the Visola outdoor lounge chair. Crafted of HDPE material that combines the exceptional durability and weather resistance you need with the “wood look” you love, this comfortably cushioned outdoor chair takes outdoor living to a whole new level.",
+        "price": 120,
+        "supplier": "Banisary",
+        "quantity": 25
+      },
+    {
+        "image": "https://i.ibb.co/4RqPvqK/3.webp",
+        "name": "Morr Wood Cabinet",
+        "description": "Morr Wood Cabinet is a beautiful hideaway storage cabinet piece that demands attention with its rustic solid wood doors decorated in a sleek, elegant, herringbone design.",
+        "price": 150,
+        "supplier": "Morr",
+        "quantity": 35
+    },
+    {
+        "image": "https://i.ibb.co/1RJHn3R/4.webp",
+        "name": "Bennet Chest Drawer",
+        "description": "Light and bright, the Socalle four-drawer chest is inspired by chic design. A natural finish over replicated oak grain offers an authentic touch to this so-cool piece. Beautifully blend the hues of natural living with the edginess of your modern lifestyle.",
+        "price": 450,
+        "supplier": "Bennet",
+        "quantity": 15
+    },
+    {
+        "image": "https://i.ibb.co/GPdTz46/5.webp",
+        "name": "Morr Leather Chair",
+        "description": "You and your family have a new go-to comfort spot when you add this double manual reclining sofa to your den or living room. It's upholstered in a mix of rich brown top grain leather and matching tone faux leather to match most decor.",
+        "price": 350,
+        "supplier": "Morr",
+        "quantity": 15
+    },
+    {
+        "image": "https://i.ibb.co/z2WgwC4/6.webp",
+        "name": "Banisary Tubular Table Lamp",
+        "description": "Banisary Lamp is Flicker-free, bright white light duplicates natural lighting, which contributes to an overall sense of health and well being. Soothing natural light minimizes glare and eyestrain and increases contrast and clarity. 27 watt energy efficiency light bulb is equivalent to an ordinary 150 watts bulb and lasts 5 times longer. Broad coverage is optimal for readers, computer users and crafters.",
+        "price": 65,
+        "supplier": "Banisary",
+        "quantity": 65
+    }
+    
+]
