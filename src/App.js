@@ -6,6 +6,7 @@ import Home from './components/Home/Home';
 import LoginPage from './components/LoginPage/LoginPage';
 import Navbar from './components/Navbar/Navbar';
 import ProductPage from './components/ProductPage/ProductPage';
+import RegisterPage from './components/RegisterPage/RegisterPage';
 
 function App() {
   const navigate = useNavigate();
@@ -31,6 +32,7 @@ function App() {
     <Route path="/" element={<Home inventoryRef={inventoryRef} handleInventoryScroll={handleInventoryScroll} />}></Route>
     <Route path="/product/:id" element={<ProductPage/>}></Route>
     <Route path="/login" element={<LoginPage/>}></Route>
+    <Route path="/register" element={<RegisterPage/>}></Route>
    </Routes>
    <Footer/>
     </div>

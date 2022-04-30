@@ -10,10 +10,10 @@ const LoginPage = () => {
             <form className="mt-10 flex justify-center flex-col items-center">
                 <div className="bg-slate-100 p-10 md:p-20 lg:p-40 rounded-md">
                 <div className="login-email-container">
-                    <input className=" bg-gray-200 border rounded-sm w-full md:w-72 lg:w-96 px-2 h-10" type="text" name="email" placeholder="Email" required id="" />
+                    <input className=" bg-gray-200 border rounded-sm w-full md:w-72 lg:w-96 px-2 h-10" type="email" name="login-email" placeholder="Email" required id="" />
                 </div>
                 <div className="login-password-container mt-4">
-                    <input type="password" className="bg-gray-200 w-full md:w-72 lg:w-96 border rounded-sm px-2 h-10"name="password" placeholder='Password' required id="" />
+                    <input type="password" className="bg-gray-200 w-full md:w-72 lg:w-96 border rounded-sm px-2 h-10"name="login-password" placeholder='Password' required id="" />
                 </div>
 
                 <div className="mt-2">
