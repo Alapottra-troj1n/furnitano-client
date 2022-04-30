@@ -17,7 +17,7 @@ const Footer = () => {
       <Link to='/' className="link link-hover">Blog</Link>
     </div> 
     <div>
-      <div class="grid grid-flow-col gap-7">
+      <div className="grid grid-flow-col gap-7">
         <a href="https://facebook.com" className="text-2xl cursor-pointer hover:text-gray-500"> <FaFacebook/> </a> 
         <a href="https://facebook.com" className="text-2xl cursor-pointer hover:text-gray-500"> <FaInstagram/> </a> 
         <a href="https://facebook.com" className="text-2xl cursor-pointer hover:text-gray-500"> <FaTwitter/> </a>  

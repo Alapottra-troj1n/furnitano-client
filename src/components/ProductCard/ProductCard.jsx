@@ -18,8 +18,8 @@ const ProductCard = ({ product }) => {
           <div className="badge badge-outline p-3">  <p>Supplier:<span className="font-medium"> { product.supplier}</span></p> </div>
           <div className="badge p-4 text-md"> <p>Price: <span className="font-medium "> { product.price}$</span></p> </div>
         </div>
-        <div class="card-actions justify-center mt-4 ">
-          <button class="bg-gray-500 text-white rounded-lg px-7 py-2 hover:bg-gray-700 transition-all"> <Link to={`/${product._id}`}>Manage</Link> </button>
+        <div className="card-actions justify-center mt-4 ">
+          <button className="bg-gray-500 text-white rounded-lg px-7 py-2 hover:bg-gray-700 transition-all"> <Link to={`/product/${product._id}`}>Manage</Link> </button>
         </div>
       </div>
     </div>
