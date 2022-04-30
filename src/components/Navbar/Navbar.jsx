@@ -1,10 +1,13 @@
+import { signOut } from 'firebase/auth';
 import React, { useState } from 'react';
+import { useAuthState } from 'react-firebase-hooks/auth';
 import { Link } from 'react-router-dom';
+import auth from '../../firebase.init';
 import './Navbar.css'
 
 const Navbar = ({handleInventoryScroll}) => {
-    
-    const [user, setUser] = useState(false);
+  const [user, loading, error] = useAuthState(auth);
+  
 
     return (
         <div className="navbar bg-base-100 container mx-auto py-4">
@@ -40,7 +43,7 @@ const Navbar = ({handleInventoryScroll}) => {
           </ul>
         </div>
         <div className="navbar-end">
-            {user ? <button className="btn">Log Out</button> : <Link to='/login' className="btn">Sign In</Link> }
+            {user ? <button className="btn" onClick={()=> signOut()}>Log Out</button> : <Link to='/login' className="btn">Sign In</Link> }
         </div>
       </div>
     );

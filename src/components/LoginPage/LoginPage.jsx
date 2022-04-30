@@ -3,7 +3,12 @@ import { Link } from 'react-router-dom';
 import './LoginPage.css';
 import { FaGoogle } from 'react-icons/fa';
 
+
 const LoginPage = () => {
+
+
+
+
     return (
         <div className="my-20">
             <h2 className="text-4xl text-center font-bold">Login</h2>
