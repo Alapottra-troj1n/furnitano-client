@@ -1,4 +1,5 @@
 import useProducts from "../../Hooks/useProducts";
+import HomeSectionOne from "../HomeSectionOne/HomeSectionOne";
 import ProductCard from "../ProductCard/ProductCard";
 import "./Home.css";
 
@@ -26,6 +27,8 @@ const Home = ({handleInventoryScroll, inventoryRef}) => {
         {products.map(product => <ProductCard product={product} key={product._id} />)}
       </div>
      </div>
+
+     <HomeSectionOne/>
     
 
     </div>
