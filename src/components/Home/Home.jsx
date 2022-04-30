@@ -6,7 +6,6 @@ import "./Home.css";
 const Home = ({handleInventoryScroll, inventoryRef}) => {
   
   const [products] = useProducts();
-  console.log(products);
 
   
 
