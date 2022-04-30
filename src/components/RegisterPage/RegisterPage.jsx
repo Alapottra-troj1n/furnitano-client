@@ -98,7 +98,7 @@ const RegisterPage = () => {
             <div className="error mt-2">
             <p className="text-md text-red-500">{error}</p>
             </div>
-           {loading ?  <p className="text-md text-slate-300">loading...</p> : ''}
+           {loading ?  <p className="text-md text-gray-600">loading...</p> : ''}
             <div className="mt-5 mb-2 text-center">
             <Link to="/login" className="hover:underline text-sm ">Already Have a Account ? Login </Link>
             </div>

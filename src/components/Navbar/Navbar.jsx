@@ -43,7 +43,7 @@ const Navbar = ({handleInventoryScroll}) => {
           </ul>
         </div>
         <div className="navbar-end">
-            {user ? <button className="btn" onClick={()=> signOut()}>Log Out</button> : <Link to='/login' className="btn">Sign In</Link> }
+            {user ? <button className="btn" onClick={()=> signOut(auth)}>Log Out</button> : <Link to='/login' className="btn">Sign In</Link> }
         </div>
       </div>
     );
