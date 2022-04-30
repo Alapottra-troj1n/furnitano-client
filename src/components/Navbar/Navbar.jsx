@@ -4,7 +4,7 @@ import './Navbar.css'
 
 const Navbar = ({handleInventoryScroll}) => {
     
-    const [user, setUser] = useState(true);
+    const [user, setUser] = useState(false);
 
     return (
         <div className="navbar bg-base-100 container mx-auto py-4">
