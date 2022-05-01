@@ -1,5 +1,6 @@
 import { useRef } from 'react';
 import { Route, Routes, useLocation, useNavigate } from 'react-router-dom';
+import { ToastContainer } from 'react-toastify';
 import './App.css';
 import Footer from './components/Footer/Footer';
 import Home from './components/Home/Home';
@@ -36,6 +37,7 @@ function App() {
     <Route path="/register" element={<RegisterPage/>}></Route>
    </Routes>
    <Footer/>
+   <ToastContainer />
     </div>
   );
 }

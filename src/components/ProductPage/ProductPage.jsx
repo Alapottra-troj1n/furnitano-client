@@ -2,6 +2,8 @@ import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import useFetchProduct from "../../Hooks/useFetchProduct";
 import { FaDollarSign, FaBoxOpen, FaHospitalUser } from "react-icons/fa";
+import { toast} from "react-toastify";
+import 'react-toastify/dist/ReactToastify.css';
 
 const ProductPage = () => {
   const params = useParams();
@@ -36,7 +38,10 @@ const ProductPage = () => {
     const data = await response.json();
     if(data.acknowledged === true){
 
-      setQuantity(quantity - 1)
+      setQuantity(quantity - 1);
+      toast.success("Item Delivered Successfully ! ",{
+        position: toast.POSITION.BOTTOM_LEFT
+      });
 
 
     }
