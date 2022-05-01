@@ -68,7 +68,7 @@ const ProductPage = () => {
       body: JSON.stringify(updatedQuanity)
   };
 
-  const response = await fetch(`http://localhost:5000/restock/${id}`, settings);
+  const response = await fetch(`https://still-cove-59195.herokuapp.com/restock/${id}`, settings);
   const data = await response.json();
   if(data.acknowledged === true){
 

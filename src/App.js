@@ -5,6 +5,7 @@ import './App.css';
 import Footer from './components/Footer/Footer';
 import Home from './components/Home/Home';
 import LoginPage from './components/LoginPage/LoginPage';
+import Manage from './components/ManagePage/Manage';
 import Navbar from './components/Navbar/Navbar';
 import ProductPage from './components/ProductPage/ProductPage';
 import RegisterPage from './components/RegisterPage/RegisterPage';
@@ -35,6 +36,7 @@ function App() {
     <Route path="/product/:id" element={<RequiredAuth><ProductPage/></RequiredAuth>}></Route>
     <Route path="/login" element={<LoginPage/>}></Route>
     <Route path="/register" element={<RegisterPage/>}></Route>
+    <Route path="/manage" element={<Manage/>}></Route>
    </Routes>
    <Footer/>
    <ToastContainer />
