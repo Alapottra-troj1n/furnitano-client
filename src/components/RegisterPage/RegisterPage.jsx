@@ -96,7 +96,7 @@ const RegisterPage = () => {
             <p className="text-md text-red-500">{fieldError}</p>
             </div>
             <div className="error mt-2">
-            <p className="text-md text-red-500">{error}</p>
+            <p className="text-md text-red-500">{error?.message}</p>
             </div>
            {loading ?  <p className="text-md text-gray-600">loading...</p> : ''}
             <div className="mt-5 mb-2 text-center">

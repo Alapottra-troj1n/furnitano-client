@@ -60,6 +60,7 @@ const LoginPage = () => {
                 <div className="my-2">
                 {loading ? <p className='text-md text-gray-600'>loading...</p>: ''}
                <p className='tex-md text-red-500'>{googleError}</p> 
+               <p className='tex-md text-red-500'>{error?.message}</p> 
                 </div>
 
                 <div className="mt-5 mb-2 text-center">
