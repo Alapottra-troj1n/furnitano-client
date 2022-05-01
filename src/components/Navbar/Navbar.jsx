@@ -20,7 +20,7 @@ const Navbar = ({handleInventoryScroll}) => {
               <li onClick={handleInventoryScroll}><span>Inventory</span> </li>
               
               {user ? <> 
-              <li><Link to='/'>Manage Inventory</Link></li>
+              <li><Link to='/manage'>Manage Inventory</Link></li>
               <li><Link to='/'>Add Furniture</Link></li>
               <li><Link to='/'>My Inventory</Link></li> 
               </> : ''}
@@ -34,7 +34,7 @@ const Navbar = ({handleInventoryScroll}) => {
           <li onClick={handleInventoryScroll}><span>Inventory</span> </li>
              
           {user ? <> 
-              <li><Link to='/'>Manage Inventory</Link></li>
+              <li><Link to='/manage'>Manage Inventory</Link></li>
               <li><Link to='/'>Add Furniture</Link></li>
               <li><Link to='/'>My Inventory</Link></li> 
               

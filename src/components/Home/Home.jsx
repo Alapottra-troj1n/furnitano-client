@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import useProducts from "../../Hooks/useProducts";
 import HomeSectionOne from "../HomeSectionOne/HomeSectionOne";
 import ProductCard from "../ProductCard/ProductCard";
@@ -24,6 +25,9 @@ const Home = ({handleInventoryScroll, inventoryRef}) => {
 
       <div className=' my-10 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 ' ref={inventoryRef}>
         {products.slice(0,6).map(product => <ProductCard product={product} key={product._id} />)}
+      </div>
+      <div className="text-center mt-2">
+      <Link to='/manage'> <button className="btn ">Manage Inventory</button></Link>
       </div>
      </div>
 

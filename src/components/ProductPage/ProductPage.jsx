@@ -49,6 +49,43 @@ const ProductPage = () => {
 
 
   }
+  const handleRestock = async(e) =>{
+
+    e.preventDefault();
+    const restock = e.target.restock.value
+
+    const updatedStock = parseInt(quantity) + parseInt(restock);
+
+    const updatedQuanity = {data : updatedStock}
+    
+
+    const settings = {
+      method: 'PUT',
+      headers: {
+          Accept: 'application/json',
+          'Content-Type': 'application/json',
+      },
+      body: JSON.stringify(updatedQuanity)
+  };
+
+  const response = await fetch(`http://localhost:5000/restock/${id}`, settings);
+  const data = await response.json();
+  if(data.acknowledged === true){
+
+    setQuantity(updatedStock);
+    toast.success("Quantity is updated ! ",{
+      position: toast.POSITION.BOTTOM_LEFT
+    });
+    e.target.reset();
+
+
+  }
+    
+
+
+
+
+  }
 
   return (
     <div>
@@ -114,6 +151,13 @@ const ProductPage = () => {
             <button className="bg-violet-500 hover:bg-violet-700 transition-colors text-white py-3 px-10 rounded-md" onClick={()=> handleDeliver()}>DELIVER</button>
             <p className="text-sm mt-1 text-gray-400">This will deduct 1 product from your overall quantity</p>
             </div>
+
+            <form className="text-center my-5" onSubmit={handleRestock}>
+             <input type="number" name="restock" className="py-2 p-2 rounded-md mx-2 bg-gray-300 "  /> 
+            <input type="submit" value="Restock" className="bg-violet-500 hover:bg-violet-700 transition-colors text-white py-2 px-7 rounded-md cursor-pointer" />
+            </form>
+
+            
 
 
 
