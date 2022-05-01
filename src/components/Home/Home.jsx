@@ -23,7 +23,7 @@ const Home = ({handleInventoryScroll, inventoryRef}) => {
       <p className="text-sm lg:text-3xl font-medium tracking-widest text-center _new-arrival-title mb-3 ">INVENTORY OVERVIEW</p> 
 
       <div className=' my-10 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 ' ref={inventoryRef}>
-        {products.map(product => <ProductCard product={product} key={product._id} />)}
+        {products.slice(0,6).map(product => <ProductCard product={product} key={product._id} />)}
       </div>
      </div>
 
