@@ -2,6 +2,9 @@ import React from "react";
 import { Link } from "react-router-dom";
 
 const ProductCard = ({ product }) => {
+
+  
+
   return (
     <div className="card w-96 bg-base-100 hover:shadow-xl transition-all cursor-pointer">
       <figure>
