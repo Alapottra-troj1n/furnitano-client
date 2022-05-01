@@ -7,6 +7,7 @@ import LoginPage from './components/LoginPage/LoginPage';
 import Navbar from './components/Navbar/Navbar';
 import ProductPage from './components/ProductPage/ProductPage';
 import RegisterPage from './components/RegisterPage/RegisterPage';
+import RequiredAuth from './components/RequiredAuth/RequiredAuth';
 
 function App() {
   const navigate = useNavigate();
@@ -30,7 +31,7 @@ function App() {
     <Navbar inventoryRef={inventoryRef} handleInventoryScroll={handleInventoryScroll} />
    <Routes>
     <Route path="/" element={<Home inventoryRef={inventoryRef} handleInventoryScroll={handleInventoryScroll} />}></Route>
-    <Route path="/product/:id" element={<ProductPage/>}></Route>
+    <Route path="/product/:id" element={<RequiredAuth><ProductPage/></RequiredAuth>}></Route>
     <Route path="/login" element={<LoginPage/>}></Route>
     <Route path="/register" element={<RegisterPage/>}></Route>
    </Routes>

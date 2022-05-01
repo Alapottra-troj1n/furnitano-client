@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link, useNavigate } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 import './LoginPage.css';
 import { FaGoogle } from 'react-icons/fa';
 import { useSignInWithEmailAndPassword, useSignInWithGoogle } from 'react-firebase-hooks/auth';
@@ -13,6 +13,9 @@ const LoginPage = () => {
         loading,
         error,
       ] = useSignInWithEmailAndPassword(auth);
+      const location = useLocation();
+
+      let from = location.state?.from?.pathname || "/";
 
       const navigate = useNavigate();
 
@@ -28,7 +31,8 @@ const LoginPage = () => {
       const [signInWithGoogle, googleUser,  googleLoading, googleError] = useSignInWithGoogle(auth);
 
       if(user || googleUser){
-            navigate('/')
+
+            navigate(from, { replace: true });
       }
 
 
@@ -36,7 +40,9 @@ const LoginPage = () => {
         <div className="my-20">
             <h2 className="text-4xl text-center font-bold">Login</h2>
             <form className="mt-10 flex justify-center flex-col items-center" onSubmit={handleLogin}>
+               
                 <div className="bg-slate-100 p-10 md:p-20 lg:p-40 rounded-md">
+                {from !== '/' ? <p className="text-center text-red-500 text-sm mb-5">Please Login First</p> : '' }
                 <div className="login-email-container">
                     <input className=" bg-gray-200 border rounded-sm w-full md:w-72 lg:w-96 px-2 h-10" type="email" name="loginEmail" placeholder="Email" required  />
                 </div>
