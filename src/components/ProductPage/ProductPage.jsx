@@ -148,7 +148,7 @@ const ProductPage = () => {
 
             </div>
             <div className="text-center my-5">
-            <button className="bg-violet-500 hover:bg-violet-700 transition-colors text-white py-3 px-10 rounded-md" onClick={()=> handleDeliver()}>DELIVER</button>
+            {quantity === 0 ? <button className="btn btn-error">Stock Out</button> : <button className="bg-violet-500 hover:bg-violet-700 transition-colors text-white py-3 px-10 rounded-md" onClick={()=> handleDeliver()}>DELIVER</button>}
             <p className="text-sm mt-1 text-gray-400">This will deduct 1 product from your overall quantity</p>
             </div>
 

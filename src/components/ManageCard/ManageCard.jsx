@@ -1,34 +1,37 @@
 import React from 'react';
+import { FaTrashAlt } from "react-icons/fa";
+import { Link } from 'react-router-dom';
 
-const ManageCard = () => {
+const ManageCard = ({product}) => {
+
     return (
         <div>
-            <div className="flex items-center border p-4">
+            <div className="flex items-center border p-4 justify-between">
 
                 <div className="flex items-center justify-between ">
-                    <img src="https://i.ibb.co/GPdTz46/5.webp" className="w-32 rounded-full" alt="" />
+                    <img src={product.image} className="w-20 lg:w-32 rounded-full" alt="" />
 
-                    <div className="ml-4">
-                        <h2 className="font-semibold text-xl whitespace-nowrap">Morr Sofa</h2>
-                        <p className="text-gray-600 text-lg">120$</p>
+                    <div className="ml-4 md:ml-7">
+                        <h2 className="font-semibold text-md lg:text-xl md:w-44 xl:w-56">{product.name}</h2>
+                        <p className="text-gray-600 text-sm lg:text-xl">{product.price}$</p>
                     </div>
 
                 </div>
 
-                <div className="ml-2 w-full flex justify-center">
-                    <h2 className="font-normal text-sm w-1/2 ">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Odit dolores ipsum ratione adipisci, in voluptatum quisquam alias modi consectetur culpa?</h2>
+                <div className=" sm:flex justify-end md:justify-center hidden">
+                    <h2 className="font-normal text-xs lg:text-sm w-1/2 ">{product.description.slice(0,100)}...</h2>
 
                 </div>
 
-                <div className="ml-2">
-                    <h2 className="font-normal text-lg ">Quantity</h2>
-                    <p className="font-normal text-sm ">50</p>
+                <div className="mx-4">
+                    <h2 className="font-semibold text-sm lg:text-lg text-right">Quantity</h2>
+                    <p className="font-normal text-xs md:text-sm text-center ">{product.quantity}</p>
 
                 </div>
 
-                <div className="ml-2 flex">
-                    <button className="btn mx-3">Delete</button>
-                    <button className="btn mr-3">Manage</button>
+                <div className="ml-2 flex flex-col lg:flex-row">
+                    <button className="mx-3 mb-2 lg:mb-0"><FaTrashAlt className="lg:text-lg text-red-500 hover:text-red-600"/></button>
+                   <Link to={`/product/${product._id}`}><button className="btn btn-sm lg:btn mr-3 mt-2 lg:mt-0 ">Manage</button> </Link>
                 </div>
 
 

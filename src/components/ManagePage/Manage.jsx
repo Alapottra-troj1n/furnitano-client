@@ -1,7 +1,12 @@
 import React from 'react';
-import ManageCard from '../ManageCard/ManageCard';
+import useProducts from "../../Hooks/useProducts";
+import ManageCard from '../ManageCard/ManageCard'
 
 const Manage = () => {
+    const [products] = useProducts();
+
+
+
     return (
 
         <div className="container mx-auto flex flex-col  justify-center ">
@@ -11,12 +16,8 @@ const Manage = () => {
 
             <div className="_card-container flex flex-col gap-5 mt-40 mb-20">
 
-
-            <ManageCard></ManageCard>
-            <ManageCard></ManageCard>
-            <ManageCard></ManageCard>
-            <ManageCard></ManageCard>
-            <ManageCard></ManageCard>
+                {products.map(product => <ManageCard product={product} />)}
+          
 
             </div>
 
