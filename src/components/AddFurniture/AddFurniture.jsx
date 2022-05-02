@@ -61,7 +61,7 @@ const AddFurniture = () => {
 
     return (
         <div>
-            <h2 className="text-3xl font-semibold text-center mt-28">Add a New Furniture Product</h2>
+            <h2 className="text-4xl font-semibold text-center mt-28">Add a New Furniture Product</h2>
 
 
             <div className="mt-16 mb-16">
