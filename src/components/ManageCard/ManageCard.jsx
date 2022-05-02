@@ -12,14 +12,14 @@ const ManageCard = ({product}) => {
                     <img src={product.image} className="w-20 lg:w-32 rounded-full" alt="" />
 
                     <div className="ml-4 md:ml-7">
-                        <h2 className="font-semibold text-md lg:text-xl md:w-44 xl:w-56">{product.name}</h2>
+                        <h2 className="font-semibold text-md lg:text-xl w-24 md:w-44 xl:w-56">{product.name}</h2>
                         <p className="text-gray-600 text-sm lg:text-xl">{product.price}$</p>
                     </div>
 
                 </div>
 
                 <div className=" sm:flex justify-end md:justify-center hidden">
-                    <h2 className="font-normal text-xs lg:text-sm w-1/2 ">{product.description.slice(0,100)}...</h2>
+                    <h2 className="font-normal text-xs lg:text-sm w-24 md:w-48 ">{product.description.slice(0,100)}...</h2>
 
                 </div>
 

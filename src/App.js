@@ -2,6 +2,7 @@ import { useRef } from 'react';
 import { Route, Routes, useLocation, useNavigate } from 'react-router-dom';
 import { ToastContainer } from 'react-toastify';
 import './App.css';
+import AddFurniture from './components/AddFurniture/AddFurniture';
 import Footer from './components/Footer/Footer';
 import Home from './components/Home/Home';
 import LoginPage from './components/LoginPage/LoginPage';
@@ -10,6 +11,7 @@ import Navbar from './components/Navbar/Navbar';
 import ProductPage from './components/ProductPage/ProductPage';
 import RegisterPage from './components/RegisterPage/RegisterPage';
 import RequiredAuth from './components/RequiredAuth/RequiredAuth';
+import 'react-toastify/dist/ReactToastify.css';
 
 function App() {
   const navigate = useNavigate();
@@ -36,7 +38,8 @@ function App() {
     <Route path="/product/:id" element={<RequiredAuth><ProductPage/></RequiredAuth>}></Route>
     <Route path="/login" element={<LoginPage/>}></Route>
     <Route path="/register" element={<RegisterPage/>}></Route>
-    <Route path="/manage" element={<Manage/>}></Route>
+    <Route path="/manage" element={<RequiredAuth><Manage/></RequiredAuth>}></Route>
+    <Route path="/addfurniture" element={<RequiredAuth><AddFurniture/></RequiredAuth>}></Route>
    </Routes>
    <Footer/>
    <ToastContainer />
