@@ -1,9 +1,11 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import useProducts from "../../Hooks/useProducts";
 import ManageCard from '../ManageCard/ManageCard'
 
 const Manage = () => {
+
     const [products] = useProducts();
+
 
 
 

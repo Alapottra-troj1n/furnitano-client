@@ -13,7 +13,7 @@ const useProducts = () => {
     }
     getProducts();
 
-  },[])
+  },[products])
 
   return [products, setProducts];
 
