@@ -24,7 +24,7 @@ const Navbar = ({handleInventoryScroll}) => {
               <li><Link to='/addfurniture'>Add Furniture</Link></li>
               <li><Link to='/myinventory'>My Inventory</Link></li> 
               </> : ''}
-              <li><Link to='/'>Blog</Link></li>
+              <li><Link to='/blog'>Blog</Link></li>
             </ul>
           </div>
           <Link to='/' className="btn btn-ghost normal-case font-bold text-xl">furnitano.</Link>
@@ -39,7 +39,7 @@ const Navbar = ({handleInventoryScroll}) => {
               <li><Link to='/myinventory'>My Inventory</Link></li> 
               
               </> : ''}
-              <li><Link to='/'>Blog</Link></li>
+              <li><Link to='/blog'>Blog</Link></li>
           </ul>
         </div>
         <div className="navbar-end">

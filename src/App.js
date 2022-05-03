@@ -14,6 +14,7 @@ import RequiredAuth from './components/RequiredAuth/RequiredAuth';
 import 'react-toastify/dist/ReactToastify.css';
 import MyInventory from './components/MyInventory/MyInventory';
 import ErrorPage from './components/ErrorPage/ErrorPage';
+import BlogPage from './components/BlogPage/BlogPage';
 
 function App() {
   const navigate = useNavigate();
@@ -43,7 +44,8 @@ function App() {
     <Route path="/manage" element={<RequiredAuth><Manage/></RequiredAuth>}></Route>
     <Route path="/myinventory" element={<RequiredAuth><MyInventory/></RequiredAuth>}></Route>
     <Route path="/addfurniture" element={<RequiredAuth><AddFurniture/></RequiredAuth>}></Route>
-    <Route path="*" element={<ErrorPage/>}></Route>
+    <Route path="/blog" element={<BlogPage/>}></Route>
+    <Route path="/*" element={<ErrorPage/>}></Route>
 
    </Routes>
    <Footer/>
