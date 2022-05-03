@@ -33,7 +33,7 @@ const MyInventory = () => {
                 <img src={user?.photoURL || `https://monstar-lab.com/global/wp-content/uploads/sites/11/2019/04/male-placeholder-image.jpeg`} alt="" className="w-44 rounded-full " />
                 <div class="indicator">
                 <span class="indicator-item badge badge-success">online</span> 
-                <h2 className='text-center text-xl my-5'> <span className="font-semibold">Welcome Back,</span> <br /> {user?.displayName}</h2>
+                <h2 className='text-center text-xl my-5'> <span className="font-semibold">Welcome Back,</span> <br /> {user?.displayName || user?.email}</h2>
                 </div>
               
             </div>

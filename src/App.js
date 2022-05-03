@@ -42,6 +42,7 @@ function App() {
     <Route path="/manage" element={<RequiredAuth><Manage/></RequiredAuth>}></Route>
     <Route path="/myinventory" element={<RequiredAuth><MyInventory/></RequiredAuth>}></Route>
     <Route path="/addfurniture" element={<RequiredAuth><AddFurniture/></RequiredAuth>}></Route>
+    
    </Routes>
    <Footer/>
    <ToastContainer />
