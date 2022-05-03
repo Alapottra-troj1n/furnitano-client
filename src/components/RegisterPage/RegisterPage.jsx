@@ -50,7 +50,7 @@ const RegisterPage = () => {
 
         }
 
-              createUserWithEmailAndPassword(email, password);
+        await createUserWithEmailAndPassword(email, password);
         await sendEmailVerification();
         await updateProfile({displayName: username});
 

@@ -22,7 +22,7 @@ const Navbar = ({handleInventoryScroll}) => {
               {user ? <> 
               <li><Link to='/manage'>Manage Inventory</Link></li>
               <li><Link to='/addfurniture'>Add Furniture</Link></li>
-              <li><Link to='/'>My Inventory</Link></li> 
+              <li><Link to='/myinventory'>My Inventory</Link></li> 
               </> : ''}
               <li><Link to='/'>Blog</Link></li>
             </ul>
@@ -36,7 +36,7 @@ const Navbar = ({handleInventoryScroll}) => {
           {user ? <> 
               <li><Link to='/manage'>Manage Inventory</Link></li>
               <li><Link to='/addfurniture'>Add Furniture</Link></li>
-              <li><Link to='/'>My Inventory</Link></li> 
+              <li><Link to='/myinventory'>My Inventory</Link></li> 
               
               </> : ''}
               <li><Link to='/'>Blog</Link></li>

@@ -12,6 +12,7 @@ import ProductPage from './components/ProductPage/ProductPage';
 import RegisterPage from './components/RegisterPage/RegisterPage';
 import RequiredAuth from './components/RequiredAuth/RequiredAuth';
 import 'react-toastify/dist/ReactToastify.css';
+import MyInventory from './components/MyInventory/MyInventory';
 
 function App() {
   const navigate = useNavigate();
@@ -39,6 +40,7 @@ function App() {
     <Route path="/login" element={<LoginPage/>}></Route>
     <Route path="/register" element={<RegisterPage/>}></Route>
     <Route path="/manage" element={<RequiredAuth><Manage/></RequiredAuth>}></Route>
+    <Route path="/myinventory" element={<RequiredAuth><MyInventory/></RequiredAuth>}></Route>
     <Route path="/addfurniture" element={<RequiredAuth><AddFurniture/></RequiredAuth>}></Route>
    </Routes>
    <Footer/>

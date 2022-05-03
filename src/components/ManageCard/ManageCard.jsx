@@ -38,7 +38,7 @@ const ManageCard = ({product}) => {
 
     return (
         <div>
-            <div className="flex items-center border p-4 justify-between">
+            <div className="flex items-center border-2 rounded-md p-4 justify-between">
 
                 <div className="flex items-center justify-between ">
                     <img src={product.image} className="w-20 lg:w-32 rounded-full" alt="" />

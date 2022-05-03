@@ -5,10 +5,7 @@ import auth from '../../firebase.init';
 
 const AddFurniture = () => {
     const [user, loading, error] = useAuthState(auth);
-    const [email, setEmail] = useState();
-    useEffect(() => {
-        setEmail(user?.email);
-    }, [])
+   
 
 
 
@@ -16,7 +13,7 @@ const AddFurniture = () => {
 
         e.preventDefault();
         const productName = e.target.addProductName.value;
-        const productEmail = email;
+        const productEmail = user.email;
         const productPrice = e.target.addPrice.value;
         const productImageUrl = e.target.addImage.value;
         const productDescription = e.target.addDes.value;

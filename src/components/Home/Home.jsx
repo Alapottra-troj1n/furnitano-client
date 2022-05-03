@@ -8,7 +8,7 @@ const Home = ({handleInventoryScroll, inventoryRef}) => {
   
   const [products] = useProducts();
 
-  
+
 
   return (
     <div>
@@ -36,6 +36,7 @@ const Home = ({handleInventoryScroll, inventoryRef}) => {
 
     </div>
   );
+  
 };
 
 export default Home;
