@@ -51,7 +51,7 @@ const LoginPage = () => {
                 </div>
 
                 <div className="mt-2">
-                <Link to="/forgetpassword" className="hover:underline text-sm ">Forget Password ?</Link>
+                <Link to="/resetpassword" className="hover:underline text-sm ">Forget Password ?</Link>
                 </div>
               
 

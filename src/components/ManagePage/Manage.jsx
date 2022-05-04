@@ -23,7 +23,7 @@ const Manage = () => {
 
             <div className="_card-container flex flex-col gap-5 mt-5 mb-20">
 
-                {products.map(product => <ManageCard product={product} />)}
+                {products.map(product => <ManageCard product={product} key={product._id} />)}
           
 
             </div>
