@@ -7,7 +7,7 @@ const HomeSectionOne = () => {
             <div className="hero min-h-full py-20 mb-20 mt-10 bg-slate-100">
   <div className="hero-content flex-col lg:flex-row-reverse">
     <div>
-    <img src="https://i.ibb.co/9qB3jrj/Untitled-design-2.png" alt='' className="max-w-md  rounded-lg bg-transparent" />
+    <img src="https://i.ibb.co/9qB3jrj/Untitled-design-2.png" alt='' className="w-3/4 lg:w-auto rounded-lg bg-transparent" />
 
     <div className="stats stats-vertical lg:stats-horizontal shadow hidden  lg:inline-grid">
   
@@ -34,7 +34,7 @@ const HomeSectionOne = () => {
     
 
     <div>
-      <h1 className="text-5xl font-bold">Manage On The Go</h1>
+      <h1 className="text-3xl lg:text-5xl font-bold">Manage On The Go</h1>
       <p className="py-6 w-3/5">Our mobile app will keep you connected to your inventory all the time. Managing your inventory has never been this easy.</p>
       <button className="btn bg-violet-600 hover:bg-violet-700">Download Our App <FaGooglePlay className='text-lg mx-2'/> </button>
     </div>

@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import useProducts from "../../Hooks/useProducts";
 import HomeSectionOne from "../HomeSectionOne/HomeSectionOne";
+import HomeSectionTwo from "../HomeSectionTwo/HomeSectionTwo";
 import ProductCard from "../ProductCard/ProductCard";
 import Spinner from "../Spinner/Spinner";
 import "./Home.css";
@@ -33,6 +34,7 @@ const Home = ({handleInventoryScroll, inventoryRef}) => {
      </div>
 
      <HomeSectionOne/>
+     <HomeSectionTwo/>
  
     </div>
   );
