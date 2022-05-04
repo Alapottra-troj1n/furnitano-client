@@ -1,14 +1,16 @@
+import { signOut } from 'firebase/auth';
 import React, { useEffect, useState } from 'react';
 import { useAuthState } from 'react-firebase-hooks/auth';
+import { useNavigate } from 'react-router-dom';
 import auth from '../../firebase.init';
 import ManageCard from '../ManageCard/ManageCard';
-import Spinner from '../Spinner/Spinner';
 
 const MyInventory = () => {
     const [user, loading, error] = useAuthState(auth);
     const [myProducts, setMyProducts] = useState([]);
-    console.log(user);
-    console.log(myProducts);
+    const navigate = useNavigate();
+
+
 
 
 
@@ -16,12 +18,29 @@ const MyInventory = () => {
 
         const fetchData = async () => {
 
-            const response = await fetch(`https://still-cove-59195.herokuapp.com/myinventory?email=${user.email}`);
-            const data = await response.json();
-            setMyProducts(data);
+            const settings = {
+                headers: {
+                    Accept: 'application/json',
+                    'Content-Type': 'application/json',
+                    authorization: `Bearer ${localStorage.getItem('accessToken')}`
+                },
+            };
+            try{
+                const response = await fetch(`https://still-cove-59195.herokuapp.com/myinventory?email=${user.email}`,settings);
+                const data = await response.json();
+                setMyProducts(data);
+            }
+            catch(err){
+                    console.log(err);
+            }
+                
+
+           
+           
 
         }
-        fetchData();
+
+        fetchData()
 
 
     }, [])
@@ -43,7 +62,7 @@ const MyInventory = () => {
                 <h2 className="text-center text-3xl font-semibold my-16">MY FURNITURES</h2>
 
                 <div className="_myproducts container mx-auto flex flex-col gap-5 p-5">
-                    {myProducts.map(product => <ManageCard product={product}/>)}
+                    {myProducts?.map(product => <ManageCard product={product}/>)}
 
                 </div>
 

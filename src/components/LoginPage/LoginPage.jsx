@@ -5,6 +5,7 @@ import { FaGoogle } from 'react-icons/fa';
 import { useSignInWithEmailAndPassword, useSignInWithGoogle } from 'react-firebase-hooks/auth';
 import auth from '../../firebase.init';
 import Spinner from '../Spinner/Spinner';
+import useToken from '../../Hooks/useToken';
 
 
 const LoginPage = () => {
@@ -16,22 +17,29 @@ const LoginPage = () => {
       ] = useSignInWithEmailAndPassword(auth);
       const location = useLocation();
 
+      const [token] = useToken(user);
+
       let from = location.state?.from?.pathname || "/";
 
       const navigate = useNavigate();
 
-      const handleLogin = (e) => {
+      const handleLogin = async(e) => {
           e.preventDefault();
 
           const email = e.target.loginEmail.value;
           const password = e.target.loginPassword.value;
 
-          signInWithEmailAndPassword(email, password);
+       
+
+         await signInWithEmailAndPassword(email, password);
+
+     
+        
       }
 
       const [signInWithGoogle, googleUser,  googleLoading, googleError] = useSignInWithGoogle(auth);
 
-      if(user || googleUser){
+      if(token){
 
             navigate(from, { replace: true });
       }
@@ -70,7 +78,11 @@ const LoginPage = () => {
                 <div className="text-center"><h2 className="text-xl font-semibold">OR</h2></div>
 
                 <div className='mt-2 text-center'>
-                    <button className='btn btn-outline px-10' onClick={()=>signInWithGoogle()} >Sign In with Google <FaGoogle className="text-xl ml-2"/> </button>
+                    <button className='btn btn-outline px-10' onClick={()=>
+                        
+                        signInWithGoogle()
+                    
+                    } >Sign In with Google <FaGoogle className="text-xl ml-2"/> </button>
 
                 </div>
 
