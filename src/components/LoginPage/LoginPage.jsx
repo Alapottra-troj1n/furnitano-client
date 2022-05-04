@@ -4,6 +4,7 @@ import './LoginPage.css';
 import { FaGoogle } from 'react-icons/fa';
 import { useSignInWithEmailAndPassword, useSignInWithGoogle } from 'react-firebase-hooks/auth';
 import auth from '../../firebase.init';
+import Spinner from '../Spinner/Spinner';
 
 
 const LoginPage = () => {
@@ -58,7 +59,7 @@ const LoginPage = () => {
                 <input type="submit" value="Login" disabled={loading ? 'true' : ''} className='btn mt-2' />
 
                 <div className="my-2">
-                {loading ? <p className='text-md text-gray-600'>loading...</p>: ''}
+                {loading ? <Spinner/>: ''}
                <p className='tex-md text-red-500'>{googleError}</p> 
                <p className='tex-md text-red-500'>{error?.message}</p> 
                 </div>

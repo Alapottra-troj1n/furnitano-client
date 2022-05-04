@@ -3,6 +3,7 @@ import { useParams } from "react-router-dom";
 import useFetchProduct from "../../Hooks/useFetchProduct";
 import { FaDollarSign, FaBoxOpen, FaHospitalUser } from "react-icons/fa";
 import { toast} from "react-toastify";
+import Spinner from "../Spinner/Spinner";
 
 
 const ProductPage = () => {
@@ -48,6 +49,7 @@ const ProductPage = () => {
 
 
 
+
   }
   const handleRestock = async(e) =>{
 
@@ -80,11 +82,17 @@ const ProductPage = () => {
 
 
   }
+
     
 
 
 
 
+  }
+
+  if(!product){
+
+    return <Spinner/>
   }
 
   return (

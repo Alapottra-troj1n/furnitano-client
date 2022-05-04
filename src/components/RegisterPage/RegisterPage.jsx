@@ -4,6 +4,7 @@ import auth from '../../firebase.init';
 import { useCreateUserWithEmailAndPassword } from 'react-firebase-hooks/auth';
 import { useUpdateProfile } from 'react-firebase-hooks/auth';
 import { useSendEmailVerification } from 'react-firebase-hooks/auth';
+import Spinner from '../Spinner/Spinner';
 
 const RegisterPage = () => {
 
@@ -98,7 +99,7 @@ const RegisterPage = () => {
             <div className="error mt-2">
             <p className="text-md text-red-500">{error?.message}</p>
             </div>
-           {loading ?  <p className="text-md text-gray-600">loading...</p> : ''}
+           {loading ?  <Spinner/> : ''}
             <div className="mt-5 mb-2 text-center">
             <Link to="/login" className="hover:underline text-sm ">Already Have a Account ? Login </Link>
             </div>

@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 import useProducts from "../../Hooks/useProducts";
 import HomeSectionOne from "../HomeSectionOne/HomeSectionOne";
 import ProductCard from "../ProductCard/ProductCard";
+import Spinner from "../Spinner/Spinner";
 import "./Home.css";
 
 const Home = ({handleInventoryScroll, inventoryRef}) => {
@@ -23,17 +24,16 @@ const Home = ({handleInventoryScroll, inventoryRef}) => {
 
       <p className="text-sm lg:text-3xl font-medium tracking-widest text-center _new-arrival-title mb-3 ">INVENTORY OVERVIEW</p> 
 
-      <div className=' my-10 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 ' ref={inventoryRef}>
+      {products.length ?     <div className=' my-10 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 ' ref={inventoryRef}>
         {products.slice(0,6).map(product => <ProductCard product={product} key={product._id} />)}
-      </div>
+      </div> : <Spinner/>}
       <div className="text-center mt-2">
       <Link to='/manage'> <button className="btn ">Manage Inventory</button></Link>
       </div>
      </div>
 
      <HomeSectionOne/>
-    
-
+ 
     </div>
   );
   
