@@ -29,9 +29,8 @@ useEffect(()=>{
 
         
 
-                const response = await fetch(`http://localhost:5000/getToken`,settings)
+                const response = await fetch(`https://still-cove-59195.herokuapp.com/getToken`,settings)
                 const data = await response.json();
-                console.log(data.jwtToken);
                 setToken(data.jwtToken);
                 
                 localStorage.setItem('accessToken', data.jwtToken);
