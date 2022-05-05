@@ -10,6 +10,6 @@
 * Ability to Check your own added items in your profile page.
 * Email Verification and Password Reset Functionality 
 
-Live Link : 
+Live Link : https://furnitano.web.app/
 
 
