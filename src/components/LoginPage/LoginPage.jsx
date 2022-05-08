@@ -16,8 +16,9 @@ const LoginPage = () => {
         error,
       ] = useSignInWithEmailAndPassword(auth);
       const location = useLocation();
+      const [signInWithGoogle, googleUser,  googleLoading, googleError] = useSignInWithGoogle(auth);
 
-      const [token] = useToken(user);
+      const [token] = useToken(user || googleUser);
 
       let from = location.state?.from?.pathname || "/";
 
@@ -37,7 +38,7 @@ const LoginPage = () => {
         
       }
 
-      const [signInWithGoogle, googleUser,  googleLoading, googleError] = useSignInWithGoogle(auth);
+      
 
       if(token){
 

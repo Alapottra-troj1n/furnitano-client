@@ -83,7 +83,7 @@ const MyInventory = () => {
                 <h2 className="text-center text-3xl font-semibold my-16">MY FURNITURES</h2>
 
                 <div className="_myproducts container mx-auto flex flex-col gap-5 p-5">
-                    {myProducts.length ? myProducts?.map(product => <ManageCard product={product} key={product._id} />) : <Spinner />}
+                    {myProducts?.map(product => <ManageCard product={product} key={product._id} />)}
 
                 </div>
 

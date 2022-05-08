@@ -9,6 +9,7 @@
 * Used Node.js and Express for backend logic.
 * Ability to Check your own added items in your profile page.
 * Email Verification and Password Reset Functionality 
+*JWT functioanlity and verification on My Inventory page
 
 Live Link : https://furnitano.web.app/
 
