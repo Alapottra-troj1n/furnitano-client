@@ -39,7 +39,6 @@ const Navbar = ({handleInventoryScroll}) => {
               <li><Link to='/myinventory'>My Inventory</Link></li> 
               
               </> : ''}
-              <li><Link to='/blog'>Blog</Link></li>
           </ul>
         </div>
         <div className="navbar-end">
