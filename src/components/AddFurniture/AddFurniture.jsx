@@ -40,7 +40,7 @@ const AddFurniture = () => {
             };
      
 
-                const response = await fetch(`https://furnitano-backend.onrender.com//manage/add`,settings)
+                const response = await fetch(`https://furnitano-backend.onrender.com/manage/add`,settings)
                 const data = await response.json();
                 console.log(data);
 

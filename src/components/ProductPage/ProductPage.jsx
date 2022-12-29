@@ -35,7 +35,7 @@ const ProductPage = () => {
       body: JSON.stringify(productData)
   };
 
-    const response = await fetch(`https://furnitano-backend.onrender.com//deliver/${id}`, settings);
+    const response = await fetch(`https://furnitano-backend.onrender.com/deliver/${id}`, settings);
     const data = await response.json();
     if(data.acknowledged === true){
 
@@ -70,7 +70,7 @@ const ProductPage = () => {
       body: JSON.stringify(updatedQuanity)
   };
 
-  const response = await fetch(`https://furnitano-backend.onrender.com//restock/${id}`, settings);
+  const response = await fetch(`https://furnitano-backend.onrender.com/restock/${id}`, settings);
   const data = await response.json();
   if(data.acknowledged === true){
 

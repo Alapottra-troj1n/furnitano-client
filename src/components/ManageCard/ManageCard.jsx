@@ -22,7 +22,7 @@ const ManageCard = ({product}) => {
 
             const deleteProduct = async() =>{
 
-                const response = await fetch(`https://furnitano-backend.onrender.com//delete/${product._id}`,settings);
+                const response = await fetch(`https://furnitano-backend.onrender.com/delete/${product._id}`,settings);
                 const data = await response.json();
                 if(data.acknowledged === true){
                     toast.success('Product has been successfully deleted');

@@ -29,7 +29,7 @@ const MyInventory = () => {
                     },
                 };
 
-                const response = await fetch(`https://furnitano-backend.onrender.com//myinventory?email=${user?.email}`, settings)
+                const response = await fetch(`https://furnitano-backend.onrender.com/myinventory?email=${user?.email}`, settings)
 
                 //inbulit fetch does not detect this as a error so catch cannot catch the error.. this is the manual way of catching the error 
                 if (response.status === 401 || response.status === 403) {
