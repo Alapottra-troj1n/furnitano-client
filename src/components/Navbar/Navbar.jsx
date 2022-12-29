@@ -6,6 +6,7 @@ import auth from '../../firebase.init';
 import './Navbar.css'
 
 const Navbar = ({handleInventoryScroll}) => {
+  
   const [user, loading, error] = useAuthState(auth);
   
 

@@ -16,7 +16,7 @@ const useProducts = () => {
     }
     getProducts();
    
-
+//change
   },[products])
 
   return [products];
