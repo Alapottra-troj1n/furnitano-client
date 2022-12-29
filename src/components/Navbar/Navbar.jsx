@@ -25,7 +25,6 @@ const Navbar = ({handleInventoryScroll}) => {
               <li><Link to='/addfurniture'>Add Furniture</Link></li>
               <li><Link to='/myinventory'>My Inventory</Link></li> 
               </> : ''}
-              <li><Link to='/blog'>Blog</Link></li>
             </ul>
           </div>
           <Link to='/' className="btn btn-ghost normal-case font-bold text-xl">furnitano.</Link>
