@@ -29,7 +29,7 @@ useEffect(()=>{
 
         
 
-                const response = await fetch(`https://still-cove-59195.herokuapp.com/getToken`,settings)
+                const response = await fetch(`https://furnitano-backend.onrender.com//getToken`,settings)
                 const data = await response.json();
                 setToken(data.jwtToken);
                 

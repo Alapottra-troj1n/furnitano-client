@@ -9,7 +9,7 @@ const useFetchProduct = (id) => {
 
             const fetchProduct = async() => {
 
-                const response = await fetch(`https://still-cove-59195.herokuapp.com/products/${id}`);
+                const response = await fetch(`https://furnitano-backend.onrender.com//products/${id}`);
                 const data = await response.json();
                 setProduct(data);
 
